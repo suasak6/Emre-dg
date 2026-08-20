@@ -121,14 +121,3 @@ async function initBlowDetection() {
     }
 }
 
-// ----------------- Küçük pastalar -----------------
-document.addEventListener("DOMContentLoaded", function () {
-
-    const bigCake = document.getElementById("cake");
-    const miniCakes = document.querySelectorAll(".mini-cake");
-
-    miniCakes.forEach(miniCake => {
-        miniCake.innerHTML = bigCake.innerHTML;
-    });
-
-});
