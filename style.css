@@ -485,11 +485,115 @@ button {
     color: hsl(0, 0%, 100%);
 }
 
-/* Küçük pastalar */
+/* =========================
+   KÜÇÜK PASTA
+   ========================= */
+
 .mini-cake {
-    width: 150px;
-    height: 100px;
+    width: 180px;
+    height: 160px;
+    position: relative;
     margin-bottom: 20px;
-    transform: scale(0.25);
-    transform-origin: center;
+}
+
+/* Alt kat */
+.mini-cake-bottom {
+    position: absolute;
+    width: 150px;
+    height: 60px;
+    left: 15px;
+    bottom: 15px;
+    background: linear-gradient(to bottom, #fcb3d7, #e8569f);
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
+
+/* Alt katın çikolatalı üstü */
+.mini-cake-top {
+    position: absolute;
+    width: 150px;
+    height: 35px;
+    top: -17px;
+    left: 0;
+    background: #532b0f;
+    border-radius: 50%;
+}
+
+/* Üst kat */
+.mini-cake-top-layer {
+    position: absolute;
+    width: 100px;
+    height: 45px;
+    left: 40px;
+    bottom: 60px;
+    background: linear-gradient(to bottom, #f9a8d1, #e961a5);
+    border-radius: 12px;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.2);
+}
+
+/* Üst katın çikolatası */
+.mini-cake-top-layer-top {
+    position: absolute;
+    width: 100px;
+    height: 25px;
+    top: -12px;
+    left: 0;
+    background: #5a2d0c;
+    border-radius: 50%;
+}
+
+/* Mumlar */
+.mini-cake-candles {
+    position: absolute;
+    top: -75px;
+    left: 40px;
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.mini-candle {
+    width: 7px;
+    height: 35px;
+    background: linear-gradient(#a221dd, #400571);
+    border-radius: 4px;
+    position: relative;
+}
+
+/* Alev */
+.mini-candle::after {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 13px;
+    background: #ff7a00;
+    border-radius: 50%;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Süslemeler */
+.mini-cake-sprinkles span {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #50a4f8;
+}
+
+.mini-cake-sprinkles span:nth-child(1) {
+    left: 20px;
+    top: 20px;
+}
+
+.mini-cake-sprinkles span:nth-child(2) {
+    left: 65px;
+    top: 35px;
+}
+
+.mini-cake-sprinkles span:nth-child(3) {
+    right: 15px;
+    top: 20px;
 }
