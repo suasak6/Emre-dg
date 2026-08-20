@@ -120,3 +120,15 @@ async function initBlowDetection() {
         console.error('Mikrofon erişimi reddedildi veya desteklenmiyor.', err);
     }
 }
+
+// ----------------- Küçük pastalar -----------------
+document.addEventListener("DOMContentLoaded", function () {
+
+    const bigCake = document.getElementById("cake");
+    const miniCakes = document.querySelectorAll(".mini-cake");
+
+    miniCakes.forEach(miniCake => {
+        miniCake.innerHTML = bigCake.innerHTML;
+    });
+
+});
