@@ -484,3 +484,12 @@ button {
     background-color: #ff69b4;
     color: hsl(0, 0%, 100%);
 }
+
+/* Küçük pastalar */
+.mini-cake {
+    width: 150px;
+    height: 100px;
+    margin-bottom: 20px;
+    transform: scale(0.25);
+    transform-origin: center;
+}
