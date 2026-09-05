@@ -1,27 +1,95 @@
 
-/* Sayfa akışı için */
+/* Genel ayarlar */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #e7ffe9;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* Sayfalar */
+
 .page {
-  display: none;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
+    display: none;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    padding: 30px 10px 10px;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 1px;
+
+    overflow: hidden;
 }
 
 .page.active {
-  display: flex;
+    display: flex;
 }
 
+
+/* Sayfadaki resimler */
+
+.sayfa-resmi {
+    width: clamp(220px, 32vh, 320px);
+    max-width: 72vw;
+
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+    display: block;
+
+    margin: 0 auto 10px;
+
+    border-radius: 28px;
+}
+
+
+/* Butonlar */
+
 button {
-  padding: 10px 20px;
-  font-size: 18px;
-  margin-top: 20px;
-  cursor: pointer;
-  border: none;
-  border-radius: 8px;
-  background-color: #094315;
-  color: white;
+    padding: 10px 20px;
+
+    font-size: 18px;
+
+    margin-top: 10px;
+
+    cursor: pointer;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #094315;
+    color: white;
+}
+
+
+/* Başlık ve yazılar */
+
+h1,
+h2,
+p {
+    margin-top: 0px;
+    margin-bottom: 5px;
 }
 
 #page1 {
@@ -52,6 +120,75 @@ button {
   background-color: #97e8f7; 
 }
 
+#page8 {
+  background-color: #bdfbb6; 
+}
+
+#page9 {
+  background-color: #f1d8b4; 
+}
+
+#page10 {
+  background-color: #cce7ff; 
+}
+
+#page11 {
+  background-color: #cccfff;
+}
+
+#page12 {
+  background-color: #cce7ff;
+}
+
+#page13 {
+  background-color: #dacdff; /* açık krem */
+}
+
+#page14 {
+  background-color: #cce7ff; /* açık mavi */
+}
+
+#page15 {
+  background-color: #ffe6f0; /* pembe ton */
+}
+
+#page16 {
+  background-color: #e6ffe6; /* açık yeşil */
+}
+
+#page17 {
+  background-color: #f2a7da; 
+}
+
+#page18 {
+  background-color: #feffc3; 
+}
+
+#page19 {
+  background-color: #97e8f7; 
+}
+
+#page20 {
+  background-color: #bdfbb6; 
+}
+
+#page21 {
+  background-color: #f1d8b4; 
+}
+
+#page22 {
+  background-color: #cce7ff; 
+}
+
+#page23 {
+  background-color: #cccfff;
+}
+
+#page24 {
+  background-color: #aceac9;
+}
+
+
 #cake {
   background-color: #fff0f5; /* pasta arka planı */
 }
@@ -64,7 +201,7 @@ button {
     height: 200px;       /* pastanın yüksekliği */
     margin: 150px auto;   /* ortalama */
     
-    background: linear-gradient(to bottom, #fcb3d7, #e8569f); 
+    background: linear-gradient(to bottom, #f1f4c8, #f49fc3); 
     border-radius: 20px; /* köşeleri biraz yuvarlat */
     box-shadow: 0 8px 15px rgba(0,0,0,0.2);
     position: relative;
@@ -88,7 +225,7 @@ button {
 
 .kutu-ust {
     position: absolute;
-    top: -48px;
+    top: -47px;
     left: 0;
 
     width: 100%;
@@ -100,13 +237,13 @@ button {
 
 .kutu-alt {
     position: absolute;
-    bottom: -36px;
+    bottom: -34px;
     left: 0;
 
     width: 100%;
     height: 100px;
 
-    background: linear-gradient(to bottom, #eb72af, #ea4799); 
+    background: linear-gradient(to bottom, #f9bcd6, #f997c5); 
     border-radius: 20px; /* köşeleri biraz yuvarlat */
     box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 
@@ -118,12 +255,12 @@ button {
 .ikinci {
     width: 300px;
     height: 155px;
-    margin-bottom: -140px; /* alt katın üstüne bindirir */
+    margin-bottom: -150px; /* alt katın üstüne bindirir */
 
 
     position: relative;
     z-index: 2;
-    background: linear-gradient(to bottom, #f9a8d1, #e961a5); 
+    background: linear-gradient(to bottom, #f1f4c8, #f77eba); 
     border-radius: 20px; /* köşeleri biraz yuvarlat */
     box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
@@ -149,7 +286,7 @@ button {
     width: 100%;
     height: 60px;
 
-    background: linear-gradient(to bottom, #eb72af, #ea4799); 
+    background: linear-gradient(to bottom, #f9a3ce, #ff94ca); 
     border-radius: 20px; /* köşeleri biraz yuvarlat */
     box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 
@@ -159,7 +296,7 @@ button {
 
 .ikinci .damlalar{
     position: absolute;
-    bottom: 123px;
+    bottom: 107px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -169,7 +306,7 @@ button {
 
 .damlalar {
     position: absolute;
-    bottom: 149px;
+    bottom: 123px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -207,7 +344,7 @@ button {
 
 .ikinci .cikolata {
     position: absolute;
-    top: -17px;
+    top: -18px;
     left: 0;
 
     width: 100%;
@@ -224,7 +361,16 @@ button {
 
 .damla {
     position: absolute;
-    bottom: -18px;
+    bottom: -79px;
+    background: linear-gradient(to bottom, #683f22, #512e12);
+    border-radius: 50%;
+    transform-origin: top center;
+    z-index: -1;
+}
+
+.damla_top {
+    position: absolute;
+    bottom: -65px;
     background: linear-gradient(to bottom, #683f22, #512e12);
     border-radius: 50%;
     transform-origin: top center;
@@ -369,10 +515,10 @@ button {
 }
 
 .candles.front .candle {
-    background: linear-gradient(#268fec, #07106c); /* pembe degrade */
+    background: linear-gradient(#8dbce6, #020e89); /* pembe degrade */
 }
 .candles.back .candle {
-    background: linear-gradient(#a221dd, #400571); /* turuncu degrade */
+    background: linear-gradient(#e479f5, #47014f); /* turuncu degrade */
 }
 
 
@@ -429,7 +575,9 @@ button {
 
 /* Mumları üfleme ile söndürme sınıfı */
 .candle.snatched::after,
-.candle.snatched::before {
+.candle.snatched::before,
+.mini-candle.snatched::after,
+.mini-candle.snatched::before {
     animation: none !important; /* alev animasyonu durur */
     opacity: 0; /* alev kaybolur */
     transition: opacity 0.8s ease-out; /* yavaşça söner */
@@ -493,19 +641,20 @@ button {
     width: 180px;
     height: 160px;
     position: relative;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
 }
 
 /* Alt kat */
 .mini-cake-bottom {
     position: absolute;
     width: 150px;
-    height: 60px;
+    height: 65px;
     left: 15px;
     bottom: 15px;
-    background: linear-gradient(to bottom, #fcb3d7, #e8569f);
-    border-radius: 15px;
+    background: linear-gradient(to bottom, #f1f4c8, #f49fc3);
+    border-radius: 15px; 
     box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+    z-index: 2;
 }
 
 /* Alt katın çikolatalı üstü */
@@ -513,10 +662,11 @@ button {
     position: absolute;
     width: 150px;
     height: 35px;
-    top: -17px;
+    top: -8px;
     left: 0;
     background: #532b0f;
     border-radius: 50%;
+    z-index: 2;
 }
 
 /* Üst kat */
@@ -525,10 +675,11 @@ button {
     width: 100px;
     height: 45px;
     left: 40px;
-    bottom: 60px;
-    background: linear-gradient(to bottom, #f9a8d1, #e961a5);
+    bottom: 65px;
+    background: linear-gradient(to bottom, #f1f4c8, #f56fb2);
     border-radius: 12px;
     box-shadow: 0 5px 8px rgba(0,0,0,0.2);
+    z-index: 5;
 }
 
 /* Üst katın çikolatası */
@@ -536,29 +687,31 @@ button {
     position: absolute;
     width: 100px;
     height: 25px;
-    top: -12px;
+    top: -5px;
     left: 0;
     background: #5a2d0c;
     border-radius: 50%;
+    z-index: 6;
 }
 
 /* Mumlar */
 .mini-cake-candles {
     position: absolute;
-    top: -75px;
-    left: 40px;
-    width: 70px;
+    top: 25px;
+    left: 63px;
+    width: 50px;
     display: flex;
     justify-content: space-between;
-    z-index: 10;
+    z-index: 100;
 }
 
 .mini-candle {
     width: 7px;
     height: 35px;
-    background: linear-gradient(#a221dd, #400571);
+    background: linear-gradient(#d079f8, #400571);
     border-radius: 4px;
     position: relative;
+    z-index: 100;
 }
 
 /* Alev */
@@ -567,33 +720,407 @@ button {
     position: absolute;
     width: 9px;
     height: 13px;
-    background: #ff7a00;
+    background: linear-gradient(#e9ff21, #f84803);
     border-radius: 50%;
     top: -12px;
     left: 50%;
     transform: translateX(-50%);
 }
 
+
+
 /* Süslemeler */
+
 .mini-cake-sprinkles span {
     position: absolute;
-    width: 8px;
-    height: 8px;
     border-radius: 50%;
-    background: #50a4f8;
+}
+
+.mini-cake-sprinkles span::after {
+    content: "";
+    position: absolute;
+    top: 1.5px;
+    left: 2px;
+    width: 2.5px;
+    height: 2.5px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.8);
 }
 
 .mini-cake-sprinkles span:nth-child(1) {
-    left: 20px;
-    top: 20px;
+    left: 27px;
+    top: 37px;
+    width: 9px;
+    height: 9px;
+    background: #07b4d2;
 }
 
 .mini-cake-sprinkles span:nth-child(2) {
-    left: 65px;
-    top: 35px;
+    left: 76px;
+    width: 9px;
+    height: 9px;
+    top: 50px;
+    background: #3058db;
 }
 
 .mini-cake-sprinkles span:nth-child(3) {
-    right: 15px;
-    top: 20px;
+    right: 11px;
+    width: 10px;
+    height: 10px;
+    top: 33px;
+    background: #02d1ff;
+}
+
+.mini-cake-sprinkles span:nth-child(4) {
+    right: 40px;
+    width: 12px;
+    height: 12px;
+    top: 37px;
+    background: #7a0085;
+}
+
+.mini-cake-sprinkles span:nth-child(5) {
+    right: 22px;
+    width: 9px;
+    height: 9px;
+    top: 53px;
+    background: #ff0370;
+}
+
+.mini-cake-sprinkles span:nth-child(6) {
+    left: 8px;
+    width: 10px;
+    height: 10px;
+    top: 49px;
+    background: #a301c0;
+}
+
+.mini-cake-sprinkles span:nth-child(7) {
+    left: 55px;
+    width: 10px;
+    height: 10px;
+    top: 33px;
+    background: #e10227;
+}
+
+.mini-cake-sprinkles span:nth-child(8) {
+    left: 45px;
+    width: 12px;
+    height: 12px;
+    top: 60px;
+    background: #02028a;
+}
+
+.mini-top-sprinkles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.mini-top-sprinkles span::after {
+    content: "";
+    position: absolute;
+    top: 1.5px;
+    left: 2px;
+    width: 2.5px;
+    height: 2.5px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.8);
+}
+
+
+.mini-top-sprinkles span {
+    position: absolute;
+    border-radius: 50%;
+}
+
+/* 1 */
+.mini-top-sprinkles span:nth-child(1) {
+    left: 10px;
+    top: 27px;
+    width: 8px;
+    height: 8px;
+    background: rgb(229, 0, 57);
+}
+
+/* 2 */
+.mini-top-sprinkles span:nth-child(2) {
+    left: 34px;
+    top: 35px;
+    width: 10px;
+    height: 10px;
+    background: #0a0ac8;
+}
+
+/* 3 */
+.mini-top-sprinkles span:nth-child(3) {
+    right: 10px;
+    top: 32px;
+    width: 9px;
+    height: 9px;
+    background: #ff00a2;
+}
+
+/* 4 */
+.mini-top-sprinkles span:nth-child(4) {
+    right: 34px;
+    top: 27px;
+    width: 8px;
+    height: 8px;
+    background: #a221dd;
+}
+
+.mini-cake-bottom-oval {
+    position: absolute;
+    bottom: -11px;
+    left: 0;
+
+    width: 100%;
+    height: 45px;
+
+    background: linear-gradient(to bottom, #f9bcd6, #f997c5);
+
+    border-radius: 50%;
+
+    box-shadow: 0 5px 8px rgba(0,0,0,0.2);
+
+    z-index: -1;
+}
+
+.mini-cake-top-layer-oval {
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+
+    width: 100%;
+    height: 30px;
+
+    background: linear-gradient(to bottom, #ff9acc, #ff94ca);
+
+    border-radius: 50%;
+
+    box-shadow: 0 4px 7px rgba(0,0,0,0.2);
+
+    z-index: 0;
+}
+
+.minik_damlalar_bottom {
+    position: absolute;
+    bottom: 43px;
+    left: -0.5px;
+    width: 63.5%;
+    height: 60%;
+    z-index: 1;
+}
+
+.minik_damla_bottom {
+    position: absolute;
+    bottom: -9px;
+    background: linear-gradient(to bottom, #562c0d, #552a07);
+    border-radius: 50%;
+    transform-origin: top center;
+    z-index: -1;
+}
+
+.minik_damlalar_top {
+    position: absolute;
+    bottom: 45px;
+    left: -0.5px;
+    width: 48%;
+    height: 50%;
+    z-index: 1;
+}
+
+.minik_damla_top {
+    position: absolute;
+    bottom: -25px;
+    background: linear-gradient(to bottom, #562c0d, #552a07);
+    border-radius: 50%;
+    transform-origin: top center;
+    z-index: -1;
+}
+
+.mini-candle.snatched::after {
+    animation: none !important;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+
+
+
+
+/* İçerik alanı */
+.kart {
+    width: min(100%, 500px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: clamp(18px, 4vh, 35px);
+}
+
+/* Pasta */
+.pasta {
+    transform: scale(0.9);
+    transform-origin: center;
+    margin-bottom: -25px;
+}
+
+.emoji {
+    font-size: 45px;
+}
+
+.kontroller button {
+    width: 70px;
+    height: 60px;
+
+    border: none;
+    border-radius: 15px;
+
+    background: #075421;
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+/* Küçük telefonlar */
+
+@media (max-width: 600px) {
+
+    .page {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .sayfa-resmi {
+        width: min(65vw, 260px);
+        max-height: 30vh;
+
+        border-radius: 24px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 16px;
+        margin-top: 5px;
+    }
+}
+
+/* SON YERLEŞİM AYARLARI */
+
+/* SON YERLEŞİM AYARLARI */
+
+.page {
+    height: 100vh;
+    height: 100dvh;
+
+    justify-content: center !important;
+
+    padding: 20px 10px !important;
+    gap: 6px !important;
+
+    overflow: hidden;
+}
+
+/* Resim */
+.sayfa-resmi {
+    width: clamp(220px, 30vh, 300px);
+    max-width: 70vw;
+
+    margin: 0 auto 5px !important;
+
+    border-radius: 28px;
+}
+
+/* Pasta */
+.pasta {
+    transform: scale(0.80);
+    transform-origin: center;
+
+    margin-top: -15px !important;
+    margin-bottom: -35px !important;
+}
+
+/* Yazılar */
+h1,
+h2,
+p {
+    margin-top: 0 !important;
+    margin-bottom: 3px !important;
+}
+
+/* Buton */
+button {
+    margin-top: 5px !important;
+}
+
+@media (max-width: 600px) {
+
+    .page {
+        padding: 15px 8px !important;
+        gap: 3px !important;
+    }
+
+    .sayfa-resmi {
+        width: min(65vw, 250px);
+        max-height: 29vh;
+    }
+
+    .pasta {
+        transform: scale(0.72);
+        margin-top: -20px !important;
+        margin-bottom: -45px !important;
+    }
+
+    button {
+        margin-top: 3px !important;
+        padding: 8px 16px;
+    }
+}
+
+/* PASTA - YAZI - BUTON BOŞLUKLARINI SIKILAŞTIR */
+
+.pasta {
+    transform: scale(0.75) !important;
+    transform-origin: center center;
+
+    margin-top: -35px !important;
+    margin-bottom: -65px !important;
+}
+
+/* Yazı */
+.page h1,
+.page h2,
+.page p {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.2;
+}
+
+/* Butonu yazıya yaklaştır */
+.page button {
+    margin-top: 4px !important;
+}
+
+/* Genel eleman aralığı */
+.page {
+    gap: 0 !important;
+}
+
+@media (max-width: 600px) {
+
+    .pasta {
+        transform: scale(0.68) !important;
+        margin-top: -45px !important;
+        margin-bottom: -75px !important;
+    }
+
+    .page button {
+        margin-top: 2px !important;
+    }
 }
