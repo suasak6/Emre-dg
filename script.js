@@ -5,7 +5,7 @@ function nextPage(current) {
 
     const next = current + 1;
 
-    if (next <= 7) {
+    if (next <= 24) {
         const nextPage = document.getElementById(`page${next}`);
         if (nextPage) nextPage.classList.add('active');
     } else {
@@ -21,33 +21,36 @@ function nextPage(current) {
 
 // ----------------- Mumları söndürme -----------------
 function blowOutCandles() {
-    const candles = document.querySelectorAll('.candle');
-    candles.forEach(candle => candle.classList.add('snatched'));
+    const activePage = document.querySelector('.active');
+const candles = activePage ? activePage.querySelectorAll('.mini-candle, .candle') : [];
+    
+candles.forEach(candle => candle.classList.add('snatched'));
 
     // Konfeti patlat
     launchConfetti(200);
 
-    // Mum alevleri söndü, küçük duman ekle
+    // Büyük pasta mı?
     const cake = document.getElementById('cake');
-    const smoke = document.createElement('div');
-    smoke.classList.add('smoke');
 
-    // Cake divinin üstüne ortala
-    smoke.style.position = 'absolute';
-    smoke.style.top = '20px'; // mumların hemen üstü
-    smoke.style.left = '50%';
-    smoke.style.transform = 'translateX(-50%)';
-    smoke.style.zIndex = '50'; // diğer katmanların üstünde
+    if (cake && cake.classList.contains('active')) {
+        const smoke = document.createElement('div');
+        smoke.classList.add('smoke');
 
-    cake.appendChild(smoke);
+        smoke.style.position = 'absolute';
+        smoke.style.top = '20px';
+        smoke.style.left = '50%';
+        smoke.style.transform = 'translateX(-50%)';
+        smoke.style.zIndex = '50';
 
-    setTimeout(() => smoke.remove(), 2500); // 2.5 saniye sonra kaybolur
+        cake.appendChild(smoke);
 
-    // 3 saniye sonra yeni sayfayı göster
-    setTimeout(() => {
-        document.getElementById('cake').classList.remove('active');
-        document.getElementById('page8').classList.add('active');
-    }, 3000);
+        setTimeout(() => smoke.remove(), 2500);
+
+        setTimeout(() => {
+            document.getElementById('cake').classList.remove('active');
+            document.getElementById('page8').classList.add('active');
+        }, 3000);
+    }
 }
 
 
@@ -109,7 +112,6 @@ async function initBlowDetection() {
 
             if (rms > 0.20) { // üfleme eşik değeri
                 blowOutCandles(); // mumları söndür
-                return; // sadece bir kez
             }
 
             requestAnimationFrame(detectBlow);
@@ -121,3 +123,82 @@ async function initBlowDetection() {
     }
 }
 
+
+function createMiniCake() {
+    const cake = document.createElement("div");
+    cake.className = "mini-cake";
+
+    cake.innerHTML = `
+         <div class="mini-cake">
+    <div class="mini-cake-bottom">
+        <div class="mini-cake-top"></div>
+
+        <div class="mini-cake-bottom-oval"></div>
+
+        <div class="minik_damlalar_bottom">
+                <div class="minik_damla_bottom" style="left: 0.00001%; width:50px; height:30px;"></div>
+                <div class="minik_damla_bottom" style="left: 37%; width:50px; height:40px;"></div>
+                <div class="minik_damla_bottom" style="left:65%; width:60px; height:40px;"></div>
+                <div class="minik_damla_bottom" style="left:108%; width:49px; height:30px;"></div> 
+            </div>
+
+        <div class="mini-cake-sprinkles">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+        <div class="mini-cake-candles">
+            <div class="mini-candle"></div>
+            <div class="mini-candle"></div>
+            <div class="mini-candle"></div>
+        </div>
+
+    <div class="mini-cake-top-layer">
+        <div class="mini-cake-top-layer-top"></div>
+        
+
+        <div class="mini-cake-top-layer-oval"></div>
+
+        <div class="minik_damlalar_top">
+                <div class="minik_damla_top" style="left: 0.00001%; width:35px; height:25px;"></div>
+                <div class="minik_damla_top" style="left: 40%; width:40px; height:30px;"></div>
+                <div class="minik_damla_top" style="left:100%; width:40px; height:25px;"></div>
+                <div class="minik_damla_top" style="left:150%; width:30px; height:25px;"></div> 
+            </div>
+
+            <div class="mini-top-sprinkles">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+    </div>
+    `;
+
+    return cake;
+}
+
+// ================================
+// KÜÇÜK PASTALARI SAYFALARA EKLE
+// ================================
+
+for (let i = 1; i <= 24; i++) {
+
+    const container = document.querySelector(
+        `#page${i} .mini-cake-container`
+    );
+
+    if (container) {
+        container.appendChild(createMiniCake());
+    }
+}
+
+// Minik pastalarda da mikrofonu başlat
+initBlowDetection();
