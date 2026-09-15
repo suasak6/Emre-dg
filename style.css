@@ -78,7 +78,7 @@ button {
     border: none;
     border-radius: 8px;
 
-    background-color: #094315;
+    background-color: #0d075c;
     color: white;
 }
 
@@ -93,51 +93,51 @@ p {
 }
 
 #page1 {
-  background-color: #dacdff; /* açık krem */
+  background-color: #aac1de; /* açık krem */
 }
 
 #page2 {
-  background-color: #cce7ff; /* açık mavi */
+  background-color: #f6d0f3; /* açık mavi */
 }
 
 #page3 {
-  background-color: #ffe6f0; /* pembe ton */
+  background-color: #a6d3fa; /* pembe ton */
 }
 
 #page4 {
-  background-color: #e6ffe6; /* açık yeşil */
+  background-color: #acffac; /* açık yeşil */
 }
 
 #page5 {
-  background-color: #f2a7da; 
+  background-color: #afb5ee; 
 }
 
 #page6 {
-  background-color: #feffc3; 
+  background-color: #c6e3e3; 
 }
 
 #page7 {
-  background-color: #97e8f7; 
+  background-color: #a6f8b1; 
 }
 
 #page8 {
-  background-color: #bdfbb6; 
+  background-color: #f8c2d5; 
 }
 
 #page9 {
-  background-color: #f1d8b4; 
+  background-color: #b8f1b4; 
 }
 
 #page10 {
-  background-color: #cce7ff; 
+  background-color: #b3d2ed; 
 }
 
 #page11 {
-  background-color: #cccfff;
+  background-color: #d5aaea;
 }
 
 #page12 {
-  background-color: #cce7ff;
+  background-color: #6d98bdfd;
 }
 
 #page13 {
@@ -153,19 +153,19 @@ p {
 }
 
 #page16 {
-  background-color: #e6ffe6; /* açık yeşil */
+  background-color: #f1c4c4; /* açık yeşil */
 }
 
 #page17 {
-  background-color: #f2a7da; 
+  background-color: #8c7ec4; 
 }
 
 #page18 {
-  background-color: #feffc3; 
+  background-color: #c4f5ed; 
 }
 
 #page19 {
-  background-color: #97e8f7; 
+  background-color: #d4b5e9; 
 }
 
 #page20 {
@@ -173,24 +173,27 @@ p {
 }
 
 #page21 {
-  background-color: #f1d8b4; 
+  background-color: #b58675; 
 }
 
 #page22 {
-  background-color: #cce7ff; 
+  background-color: #9fb9d0; 
 }
 
 #page23 {
-  background-color: #cccfff;
+  background-color: #cda1d8;
 }
 
 #page24 {
   background-color: #aceac9;
 }
 
+#page25 {
+  background-color: #eec1e0; 
+}
 
 #cake {
-  background-color: #fff0f5; /* pasta arka planı */
+  background-color: #9db2cc; /* pasta arka planı */
 }
 
 
@@ -982,7 +985,7 @@ p {
     border: none;
     border-radius: 15px;
 
-    background: #075421;
+    background: #0d0560;
     font-size: 28px;
 
     cursor: pointer;
@@ -1168,4 +1171,14 @@ button {
     .pasta {
         transform: scale(0.48) !important;
     }
+}
+
+.kontroller button {
+    width: 70px !important;
+    height: 60px !important;
+    border: none !important;
+    border-radius: 15px !important;
+    background-color: #0d0560 !important;
+    font-size: 28px !important;
+    cursor: pointer;
 }
