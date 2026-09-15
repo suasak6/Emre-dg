@@ -5,7 +5,7 @@ function nextPage(current) {
 
     const next = current + 1;
 
-    if (next <= 24) {
+    if (next <= 25) {
         const nextPage = document.getElementById(`page${next}`);
         if (nextPage) nextPage.classList.add('active');
     } else {
@@ -189,7 +189,7 @@ function createMiniCake() {
 // KÜÇÜK PASTALARI SAYFALARA EKLE
 // ================================
 
-for (let i = 1; i <= 24; i++) {
+for (let i = 1; i <= 25; i++) {
 
     const container = document.querySelector(
         `#page${i} .mini-cake-container`
