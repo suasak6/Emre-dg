@@ -198,8 +198,8 @@ p {
 
 .kutu {
     width: 400px;        /* pastanın genişliği */
-    height: 200px;       /* pastanın yüksekliği */
-    margin: 150px auto;   /* ortalama */
+    height: 140px;       /* pastanın yüksekliği */
+    margin: 80px auto;   /* ortalama */
     
     background: linear-gradient(to bottom, #f1f4c8, #f49fc3); 
     border-radius: 20px; /* köşeleri biraz yuvarlat */
@@ -225,7 +225,7 @@ p {
 
 .kutu-ust {
     position: absolute;
-    top: -47px;
+    top: -30%;
     left: 0;
 
     width: 100%;
@@ -254,8 +254,8 @@ p {
 
 .ikinci {
     width: 300px;
-    height: 155px;
-    margin-bottom: -150px; /* alt katın üstüne bindirir */
+    height: 115px    ;
+    margin-bottom: -90px; /* alt katın üstüne bindirir */
 
 
     position: relative;
@@ -267,7 +267,7 @@ p {
 
 .ikinci .kutu-ust {
     position: absolute;
-    top: -18px;
+    top: -16px;
     left: 0;
 
     width: 100%;
@@ -296,7 +296,7 @@ p {
 
 .ikinci .damlalar{
     position: absolute;
-    bottom: 117%;
+    bottom: 110%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -1122,5 +1122,50 @@ button {
 
     .page button {
         margin-top: 2px !important;
+    }
+}
+
+/* =========================
+   PASTA RESPONSIVE
+========================= */
+
+.pasta {
+    width: 400px;
+    flex-shrink: 0;
+
+    transform: scale(0.75) !important;
+    transform-origin: center center;
+
+    margin-top: -35px !important;
+    margin-bottom: -65px !important;
+}
+
+/* Normal telefon */
+@media (max-width: 600px) {
+
+    .pasta {
+        transform: scale(0.60) !important;
+
+        margin-top: -55px !important;
+        margin-bottom: -90px !important;
+    }
+}
+
+/* Küçük telefon */
+@media (max-width: 400px) {
+
+    .pasta {
+        transform: scale(0.55) !important;
+
+        margin-top: -65px !important;
+        margin-bottom: -100px !important;
+    }
+}
+
+/* Çok küçük telefon */
+@media (max-width: 350px) {
+
+    .pasta {
+        transform: scale(0.48) !important;
     }
 }
