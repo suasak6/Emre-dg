@@ -48,7 +48,7 @@ candles.forEach(candle => candle.classList.add('snatched'));
 
         setTimeout(() => {
             document.getElementById('cake').classList.remove('active');
-            document.getElementById('page8').classList.add('active');
+            document.getElementById('page26').classList.add('active');
         }, 3000);
     }
 }
